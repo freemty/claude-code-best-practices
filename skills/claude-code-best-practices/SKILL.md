@@ -10,7 +10,7 @@ description: >
 
 ## Overview
 
-This skill analyzes your current task type and recommends the optimal workflow, skill, or agent to use. It serves as a decision router backed by synthesized principles from 9 curated sources including the Superpowers framework, AReaL (vibe-coded distributed RL in 32 days), Everything Claude Code, and official Anthropic engineering guides. Core principle: think before you code, verify before you ship.
+This skill analyzes your current task type and recommends the optimal workflow, skill, or agent to use. It serves as a decision router backed by synthesized principles from 8 curated sources including the Superpowers framework, AReaL, official Anthropic engineering guides, and Manus. Core principle: think before you code, verify before you ship.
 
 ## Decision Framework
 
@@ -138,20 +138,7 @@ START
 - **Multi-session parallelism**: multitasking (different tasks boost throughput) + pass@k (same task with different constraints, pick best); 402 parallel events
 - **74% detours are normal**: zero-handwritten does not mean zero-friction; encode preferences into rules, set checkpoints at every step
 
-### Source 3: Everything Claude Code
-> https://github.com/affaan-m/everything-claude-code
-> Core: 25 specialized agents + 108+ domain skills + 57 slash commands forming a closed-loop system
-
-- **Multi-layered toolchain**: not a tool collection but a self-reinforcing system where each component strengthens the others
-- **Continuous learning engine**: best practices from each session auto-aggregate into new skills; /evolve generates new skills creating a positive feedback loop
-- **Memory persistence hooks**: auto-save/load context across sessions, avoid re-learning, support compression suggestions
-- **Token cost optimization**: model selection awareness + system prompt simplification + background process reduction -- full-chain inference cost optimization
-- **Subagent orchestration**: iterative retrieval + progressive context refinement for multi-agent collaboration without context loss
-- **Verification closed loop**: checkpoint verification to continuous evaluation, integrated Playwright E2E, 80% coverage enforced
-- **Package manager auto-detection**: identifies npm/pnpm/yarn/bun via environment variables, project config, and lock files
-- **Compound growth**: skills -> continuous learning -> new intuitions -> /evolve new skills -> system capability progressively increases
-
-### Source 4: Claude Code Official -- How It Works
+### Source 3: Claude Code Official -- How It Works
 > https://code.claude.com/docs/how-claude-code-works
 
 - **Agentic loop three stages**: gather context -> take action -> verify results, iterating until complete
@@ -163,7 +150,7 @@ START
 - **Memory system**: CLAUDE.md first 200 lines loaded every session, auto-memory saves pattern recognition across sessions
 - **Conversational interaction**: supports real-time interruption and course correction; giving verification tools (tests, screenshots) improves outcomes
 
-### Source 5: Claude Code Official -- Hooks Guide
+### Source 4: Claude Code Official -- Hooks Guide
 > https://code.claude.com/docs/hooks-guide
 
 - **Four hook types**: command (shell), http (POST endpoint), prompt (single-turn LLM evaluation), agent (multi-turn verification)
@@ -175,7 +162,7 @@ START
 - **Agent hooks**: for codebase state checks, spawns subagent for multi-turn tool-call verification (default 60s timeout, max 50 turns)
 - **Common patterns**: desktop notifications, auto-formatting, sensitive file protection, post-compact context re-injection, config change auditing
 
-### Source 6: Anthropic -- Effective Context Engineering
+### Source 5: Anthropic -- Effective Context Engineering
 > https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
 > Core: Context quality over quantity -- find the "minimal high-signal token set"
 
@@ -192,7 +179,7 @@ START
 - **Subagent divide-and-conquer**: specialized agents each maintain clean context, return only 1000-2000 token summaries
 - **Match strategy to task**: session continuity uses compression, iterative dev uses notes, parallel exploration uses multi-agent
 
-### Source 7: Anthropic -- Demystifying Evals for AI Agents
+### Source 6: Anthropic -- Demystifying Evals for AI Agents
 > https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
 > Core: Evals are the infrastructure foundation for agent quality
 
@@ -206,7 +193,7 @@ START
 - **Detect eval saturation**: 100% pass rate = eval is broken, add more challenging cases
 - **Treat evals like unit tests**: establish ownership, update regularly as the agent evolves
 
-### Source 8: Manus -- Context Engineering for AI Agents
+### Source 7: Manus -- Context Engineering for AI Agents
 > https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
 > Core: Good AI agents need context engineering, not just prompt engineering
 
@@ -221,7 +208,7 @@ START
 - **Introduce controlled variability**: avoid same few-shot examples causing pattern lock-in
 - **Context-first over fine-tuning**: prioritize context engineering for fast iteration
 
-### Source 9: Community Resources
+### Source 8: Community Resources
 > Claude Code & Codex best practices collection
 
 - **Skills.sh**: https://skills.sh/ -- discover and install community skills for Claude Code
@@ -244,7 +231,6 @@ START
 - TDD is mandatory, not optional: RED -> GREEN -> REFACTOR (Superpowers)
 - Minimal reproduction demo for bugs -- shrink context, precision skyrockets (AReaL)
 - Multi-layer verification: pre-commit -> domain review -> regression tests (AReaL)
-- 80% test coverage as minimum gate (Everything Claude Code)
 - Start from 20-50 real failure cases, not hundreds -- small evals, iterate fast (Anthropic Evals)
 - Pass@k for potential, Pass^k for consistency -- know which metric you need (Anthropic Evals)
 
@@ -276,11 +262,9 @@ START
 - Curated examples > exhaustive lists -- examples are the most powerful LLM communication (Anthropic CE)
 
 ### 6. Continuous Improvement -- The System Evolves
-- Skills -> continuous learning -> new intuitions -> /evolve -> new skills (ECC)
-- Memory hooks auto-save/load cross-session context (ECC)
 - Configuration engineering is a first-class practice -- iterate .claude/ like code (AReaL)
 - 74% of sessions are partial completions -- friction is normal, reduce via checkpoints (AReaL)
-- Token cost optimization: model selection + prompt simplification across full chain (ECC)
+- Auto-memory saves pattern recognition across sessions; CLAUDE.md first 200 lines always loaded (Official)
 - Eval saturation detection: 100% pass rate = eval is broken, add harder cases (Anthropic Evals)
 
 ### 7. Parallel Execution -- Scale Smart
