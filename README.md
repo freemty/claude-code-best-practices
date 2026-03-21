@@ -4,11 +4,26 @@ Your Claude Code workflow advisor -- recommends the right skill, agent, or workf
 
 ## Install
 
+**Option 1: Manual (recommended)**
+
 ```bash
-npx claude-code-skill install freemty/claude-code-best-practices
+mkdir -p ~/.claude/skills/claude-code-best-practices
+curl -sL https://raw.githubusercontent.com/freemty/claude-code-best-practices/main/skills/claude-code-best-practices/SKILL.md \
+  -o ~/.claude/skills/claude-code-best-practices/SKILL.md
 ```
 
-Or manually copy `skills/claude-code-best-practices/SKILL.md` into your `~/.claude/skills/claude-code-best-practices/` directory.
+**Option 2: Git clone**
+
+```bash
+git clone https://github.com/freemty/claude-code-best-practices.git ~/.claude/plugins/claude-code-best-practices
+```
+
+Then add to your `~/.claude/settings.json`:
+```json
+{
+  "plugins": ["~/.claude/plugins/claude-code-best-practices"]
+}
+```
 
 ## What it does
 
