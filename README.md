@@ -1,10 +1,19 @@
 # claude-code-best-practices
 
+> **Claude Code Skill** | Installable via `npx skills add`
+
 Your Claude Code workflow advisor -- recommends the right skill, agent, or workflow for any task based on 8 curated best practice sources.
 
 ## Install
 
-**Option 1: Manual (recommended)**
+```bash
+npx skills add freemty/claude-code-best-practices
+```
+
+<details>
+<summary>Alternative install methods</summary>
+
+**Manual (curl)**
 
 ```bash
 mkdir -p ~/.claude/skills/claude-code-best-practices
@@ -12,7 +21,7 @@ curl -sL https://raw.githubusercontent.com/freemty/claude-code-best-practices/ma
   -o ~/.claude/skills/claude-code-best-practices/SKILL.md
 ```
 
-**Option 2: Git clone**
+**Git clone (as plugin)**
 
 ```bash
 git clone https://github.com/freemty/claude-code-best-practices.git ~/.claude/plugins/claude-code-best-practices
@@ -24,6 +33,8 @@ Then add to your `~/.claude/settings.json`:
   "plugins": ["~/.claude/plugins/claude-code-best-practices"]
 }
 ```
+
+</details>
 
 ## What it does
 
