@@ -1,9 +1,8 @@
 ---
 name: claude-code-best-practices
 description: >
-  Use when unsure what to do next, starting a new task, needing workflow guidance,
-  or asking "how should I approach this". Recommends optimal skill, agent, or
-  workflow based on task type and current situation.
+  Use when unsure what to do next, starting a new task, feeling stuck or lost,
+  needing workflow guidance, or asking "how should I approach this".
 ---
 
 # Claude Code Best Practices
@@ -11,6 +10,19 @@ description: >
 ## Overview
 
 This skill analyzes your current task type and recommends the optimal workflow, skill, or agent to use. It serves as a decision router backed by synthesized principles from 8 curated sources including the Superpowers framework, AReaL, official Anthropic engineering guides, and Manus. Core principle: think before you code, verify before you ship.
+
+## When to Use
+
+- "How should I approach this?" — unsure where to start
+- Starting a new feature, bug fix, or refactor session
+- Feeling overwhelmed by a large task — need to break it down
+- Don't know which skill or agent to reach for
+- Between steps — just finished something, what's next?
+
+**When NOT to use:**
+- You already know exactly what to do and which skill to invoke
+- Mid-execution of a plan (stay in your current skill)
+- Pure exploration/reading with no action needed
 
 ## Decision Framework
 
@@ -281,3 +293,16 @@ START
 - Use prompt hooks for AI judgment, agent hooks for codebase verification (Official)
 - Auto-format, lint, sensitive file protection, context re-injection (Official)
 - Three-layer config: user global -> project -> local project (Official)
+
+---
+
+## Common Mistakes
+
+| Mistake | Fix |
+|---------|-----|
+| Jumping straight to code without planning | Brainstorm first, even for "simple" tasks — 74% of sessions detour (AReaL) |
+| Writing tests after implementation | Tests-after = "what does this do?" Tests-first = "what should this do?" |
+| Stuffing everything into CLAUDE.md | Keep it a slim router (<200 lines); use rules/, agents/, skills/ for details |
+| Running one agent for everything | Tier models: haiku for execution, sonnet for review, opus for reasoning |
+| Ignoring context window limits | Delegate heavy output to subagents; avoid last 20% for complex tasks |
+| Skipping verification before claiming done | Always run tests/checks and confirm output before asserting success |
