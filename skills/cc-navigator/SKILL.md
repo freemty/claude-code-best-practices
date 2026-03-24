@@ -1,13 +1,13 @@
 ---
-name: claude-code-best-practices
+name: cc-navigator
 description: >
   Use when unsure what to do next, starting a new task, feeling stuck or lost,
   needing workflow guidance, or asking "how should I approach this".
 ---
 
-# Claude Code Best Practices
+# CC Navigator
 
-A CC tutorial in skill form. Synthesized from 8 curated sources — all directly about using Claude Code effectively — including the CC creator's tips, Anthropic engineers' guides, and battle-tested community frameworks. Core principle: think before you code, verify before you ship.
+Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 8 authoritative sources including the CC creator's tips and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
 
 For deep dives on any source or tool, see the `references/` directory.
 
