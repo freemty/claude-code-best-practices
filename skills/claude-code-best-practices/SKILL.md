@@ -176,16 +176,14 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 
 ## Sources
 
-All sources are directly about using Claude Code effectively.
-
-1. **Superpowers** — https://github.com/obra/superpowers — CC workflow framework: TDD, task atomization, worktrees
-2. **AReaL (Starcat)** — https://zhuanlan.zhihu.com/p/2003269671630165191 + https://github.com/inclusionAI/AReaL — 32 days zero-handwritten distributed RL, 178 CC sessions
-3. **CC Official: How It Works** — https://code.claude.com/docs/how-claude-code-works — Agentic loop, context management, extension architecture
-4. **CC Official: Hooks Guide** — https://code.claude.com/docs/hooks-guide — 4 hook types, 19 lifecycle events, matcher filtering
-5. **Boris Cherny: CC Tips from the Team** — https://x.com/bcherny/status/2017742741636321619 — CC creator's 10 tips (see references/boris-cherny-cc-tips.md)
-6. **Tw93: CC Architecture & Engineering** — https://x.com/HiTw93/status/2032091246588518683 — Six-layer architecture, context governance, Skills design (see references/tw93-cc-architecture.md)
-7. **Thariq: How We Use Skills** — https://x.com/trq212/status/2033949937936085378 — 9 skill categories, writing best practices (see references/thariq-how-we-use-skills.md)
-8. **Thariq: Seeing like an Agent** — https://x.com/trq212/status/2027463795355095314 — Tool design philosophy, progressive disclosure (see references/thariq-seeing-like-an-agent.md)
+1. **Superpowers** — https://github.com/obra/superpowers
+2. **AReaL** — https://zhuanlan.zhihu.com/p/2003269671630165191
+3. **CC Official: How It Works** — https://code.claude.com/docs/how-claude-code-works
+4. **CC Official: Hooks** — https://code.claude.com/docs/hooks-guide
+5. **Boris Cherny** — https://x.com/bcherny/status/2017742741636321619 (references/boris-cherny-cc-tips.md)
+6. **Tw93** — https://x.com/HiTw93/status/2032091246588518683 (references/tw93-cc-architecture.md)
+7. **Thariq: Skills** — https://x.com/trq212/status/2033949937936085378 (references/thariq-how-we-use-skills.md)
+8. **Thariq: Agent Design** — https://x.com/trq212/status/2027463795355095314 (references/thariq-seeing-like-an-agent.md)
 
 ## Common Mistakes
 
