@@ -15,7 +15,7 @@ Your Claude Code workflow navigator -- recommends the right skill, agent, or too
 ## Install
 
 ```bash
-npx skills add freemty/claude-code-best-practices
+npx skills add freemty/cc-navigator
 ```
 
 <details>
