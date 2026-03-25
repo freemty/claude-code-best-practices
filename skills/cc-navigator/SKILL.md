@@ -7,7 +7,7 @@ description: >
 
 # CC Navigator
 
-Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 10 authoritative sources including Anthropic's official skills repo, the CC creator's tips, and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
+Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 11 authoritative sources including Anthropic's official skills repo, the CC creator's tips, and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
 
 For deep dives on any source or tool, see the `references/` directory.
 
@@ -163,8 +163,15 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 | Jina Reader | Quick webpage -> markdown (`r.jina.ai/URL`) |
 | markdown-proxy | Login-required pages (X/Twitter, WeChat) |
 | Agent-Reach | Multi-platform access (Twitter, YouTube, Reddit, XHS...) |
+| web-fetcher | 5-tier fallback: Jina → defuddle → markdown.new → OpenCLI → raw HTML (jiahao-shao1) |
 | Playwright CLI | Browser automation & testing |
 | Web Access Skill | Comprehensive browsing with learning |
+
+### Remote Execution (references/jiahao-shao1-skills.md)
+
+| Tool | Use When |
+|------|----------|
+| remote-cluster-agent | CC operates remote GPU clusters via MCP (~0.1s latency) (jiahao-shao1) |
 
 ### SWE Workflow (references/ecosystem-workflow.md)
 
@@ -193,6 +200,7 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 8. **Thariq: Agent Design** — https://x.com/trq212/status/2027463795355095314 (references/thariq-seeing-like-an-agent.md)
 9. **Harness Design** — https://www.anthropic.com/engineering/harness-design-long-running-apps
 10. **Anthropic Skills** — https://github.com/anthropics/skills (references/anthropic-skills-official.md)
+11. **jiahao-shao1** — https://github.com/jiahao-shao1 (references/jiahao-shao1-skills.md)
 
 ## Common Mistakes
 

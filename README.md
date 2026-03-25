@@ -10,7 +10,7 @@
 
 > **Claude Code Skill** | Installable via `npx skills add`
 
-Your Claude Code workflow navigator -- recommends the right skill, agent, or tool for any task based on 10 curated sources.
+Your Claude Code workflow navigator -- recommends the right skill, agent, or tool for any task based on 11 curated sources. Part of [yuanbo-skills](https://github.com/freemty/yuanbo-skills).
 
 ## Install
 
@@ -25,14 +25,14 @@ npx skills add freemty/cc-navigator
 
 ```bash
 mkdir -p ~/.claude/skills/cc-navigator
-curl -sL https://raw.githubusercontent.com/freemty/claude-code-best-practices/main/skills/cc-navigator/SKILL.md \
+curl -sL https://raw.githubusercontent.com/freemty/cc-navigator/main/skills/cc-navigator/SKILL.md \
   -o ~/.claude/skills/cc-navigator/SKILL.md
 ```
 
 **Git clone (as plugin)**
 
 ```bash
-git clone https://github.com/freemty/claude-code-best-practices.git ~/.claude/plugins/cc-navigator
+git clone https://github.com/freemty/cc-navigator.git ~/.claude/plugins/cc-navigator
 ```
 
 Then add to your `~/.claude/settings.json`:
@@ -47,7 +47,7 @@ Then add to your `~/.claude/settings.json`:
 ## What it does
 
 - **Navigates your workflow** -- classifies your task and recommends the right skill, in the right order
-- **Synthesizes best practices** from 10 authoritative CC-specific sources
+- **Synthesizes best practices** from 11 authoritative CC-specific sources
 - **Points to ecosystem tools** for web access, SWE workflows, and information presentation
 
 ## When it triggers
@@ -62,7 +62,7 @@ Then add to your `~/.claude/settings.json`:
 | Section | Content |
 |---------|---------|
 | Decision Framework | Task classification table + workflow decision tree |
-| Synthesized Principles | 8 cross-source principles for daily practice (10 sources) |
+| Synthesized Principles | 8 cross-source principles for daily practice (11 sources) |
 | Ecosystem Quick Reference | Web access, SWE workflow, and presentation tools |
 | References | Full article archives + ecosystem detail guides |
 
@@ -78,6 +78,7 @@ Then add to your `~/.claude/settings.json`:
 8. [Thariq: Seeing like an Agent](https://x.com/trq212/status/2027463795355095314) -- Tool design philosophy
 9. [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps) -- GAN-inspired multi-agent for long tasks
 10. [Anthropic Skills](https://github.com/anthropics/skills) -- Official skill spec, progressive disclosure, eval-driven skill development
+11. [jiahao-shao1](https://github.com/jiahao-shao1) -- Research workflow skills, remote-cluster-agent, 5-tier web-fetcher
 
 ## License
 
