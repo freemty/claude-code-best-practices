@@ -10,7 +10,7 @@
 
 > **Claude Code Skill** | Installable via `npx skills add`
 
-Your Claude Code workflow navigator -- recommends the right skill, agent, or tool for any task based on 9 curated sources.
+Your Claude Code workflow navigator -- recommends the right skill, agent, or tool for any task based on 10 curated sources.
 
 ## Install
 
@@ -47,7 +47,7 @@ Then add to your `~/.claude/settings.json`:
 ## What it does
 
 - **Navigates your workflow** -- classifies your task and recommends the right skill, in the right order
-- **Synthesizes best practices** from 8 authoritative CC-specific sources
+- **Synthesizes best practices** from 10 authoritative CC-specific sources
 - **Points to ecosystem tools** for web access, SWE workflows, and information presentation
 
 ## When it triggers
@@ -62,7 +62,7 @@ Then add to your `~/.claude/settings.json`:
 | Section | Content |
 |---------|---------|
 | Decision Framework | Task classification table + workflow decision tree |
-| Synthesized Principles | 8 cross-source principles for daily practice |
+| Synthesized Principles | 8 cross-source principles for daily practice (10 sources) |
 | Ecosystem Quick Reference | Web access, SWE workflow, and presentation tools |
 | References | Full article archives + ecosystem detail guides |
 
@@ -77,6 +77,7 @@ Then add to your `~/.claude/settings.json`:
 7. [Thariq: How We Use Skills](https://x.com/trq212/status/2033949937936085378) -- 9 skill categories, writing best practices
 8. [Thariq: Seeing like an Agent](https://x.com/trq212/status/2027463795355095314) -- Tool design philosophy
 9. [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps) -- GAN-inspired multi-agent for long tasks
+10. [Anthropic Skills](https://github.com/anthropics/skills) -- Official skill spec, progressive disclosure, eval-driven skill development
 
 ## License
 

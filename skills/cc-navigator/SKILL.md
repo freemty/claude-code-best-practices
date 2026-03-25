@@ -7,7 +7,7 @@ description: >
 
 # CC Navigator
 
-Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 9 authoritative sources including the CC creator's tips and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
+Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 10 authoritative sources including Anthropic's official skills repo, the CC creator's tips, and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
 
 For deep dives on any source or tool, see the `references/` directory.
 
@@ -108,13 +108,17 @@ START
 
 ### 4. Skills Engineering — Progressive Disclosure
 
+- Three-level loading: metadata (~100 words, always in context) -> SKILL.md body (<500 lines, on trigger) -> bundled resources (unlimited, on demand) (Official)
 - A skill is a folder, not just a markdown file — include scripts, assets, data (Thariq Skills)
-- SKILL.md = navigation + core constraints; large references go to supporting files (Tw93, Thariq)
-- Description = "when to trigger", not "what I do" — optimize for trigger accuracy (Tw93, Thariq)
+- SKILL.md = navigation + core constraints; large references go to supporting files (Tw93, Thariq, Official)
+- Description = primary trigger mechanism; be "pushy" — Claude tends to undertrigger (Official)
+- Description should include both what it does AND specific contexts for when to use it (Official)
 - Gotchas are the highest-signal content in any skill (Thariq Skills)
 - High-freq (>1/session) -> auto-invoke; low-freq -> disable-auto-invoke; rare -> remove (Tw93)
 - 9 skill categories: Library, Verification, Data, Workflow, Scaffolding, Quality, DevOps, Debug, Maintenance (Thariq Skills)
 - If you do something more than once a day, make it a skill (Boris)
+- Explain why > heavy MUSTs — LLMs have good theory of mind, reasoning beats rigid rules (Official)
+- Eval-driven development: draft -> test with baseline -> human review -> improve -> repeat (Official skill-creator)
 
 ### 5. Tool Design — See Like an Agent
 
@@ -188,6 +192,7 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 7. **Thariq: Skills** — https://x.com/trq212/status/2033949937936085378 (references/thariq-how-we-use-skills.md)
 8. **Thariq: Agent Design** — https://x.com/trq212/status/2027463795355095314 (references/thariq-seeing-like-an-agent.md)
 9. **Harness Design** — https://www.anthropic.com/engineering/harness-design-long-running-apps
+10. **Anthropic Skills** — https://github.com/anthropics/skills (references/anthropic-skills-official.md)
 
 ## Common Mistakes
 
@@ -199,5 +204,6 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 | Running one agent for everything | Tier models: haiku for execution, sonnet for review, opus for reasoning |
 | Ignoring context window limits | MCP tools alone eat 10-20K tokens; delegate heavy output to subagents |
 | Skipping verification before claiming done | Always run tests/checks and confirm output before asserting success |
-| Skills with vague descriptions | Description = "when to trigger", not "what I do"; optimize for accuracy |
+| Skills with vague descriptions | Description = primary trigger; be "pushy" — Claude undertriggers by default (Official) |
+| Writing rigid MUSTs instead of reasoning | Explain why it matters — LLMs respond better to reasoning than commands (Official) |
 | Not investing in CLAUDE.md | After every correction: "Update your CLAUDE.md so you don't make that mistake again" |
