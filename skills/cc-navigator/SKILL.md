@@ -7,7 +7,7 @@ description: >
 
 # CC Navigator
 
-Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 8 authoritative sources including the CC creator's tips and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
+Your Claude Code workflow navigator. Recommends the right skill, agent, or tool for any task — synthesized from 9 authoritative sources including the CC creator's tips and Anthropic engineers' guides. Core principle: think before you code, verify before you ship.
 
 For deep dives on any source or tool, see the `references/` directory.
 
@@ -84,6 +84,7 @@ START
 - Brainstorm -> Plan -> Execute -> Verify -> Review — always in this order (Superpowers)
 - Start every complex task in plan mode; pour energy into the plan so Claude can 1-shot the implementation (Boris)
 - Let one Claude write the plan, another review it as a staff engineer (Boris)
+- Use sprint contracts: generator and evaluator negotiate testable success criteria before implementation (Harness Design)
 - 74 planning sessions vs 9 coding sessions — planning time exceeding coding time is normal (AReaL)
 
 ### 2. Evidence-Driven — Tests are the Contract
@@ -93,6 +94,7 @@ START
 - Minimal reproduction demo for bugs — shrink context, precision skyrockets (AReaL)
 - Say "Prove to me this works" and have Claude diff behavior between main and your branch (Boris)
 - Challenge Claude: "Grill me on these changes and don't make a PR until I pass your test" (Boris)
+- Separate generator from evaluator — self-evaluation bias is real; use external agent to critique (Harness Design)
 
 ### 3. Context Hygiene — Protect the Window
 
@@ -121,6 +123,7 @@ START
 - Progressive disclosure adds functionality without adding tools (Thariq Agent)
 - As models improve, old tools may constrain — revisit assumptions (Thariq Agent: TodoWrite -> Task)
 - Claude is increasingly good at building its own context given the right search tools (Thariq Agent)
+- Stress-test harness assumptions: as models improve, components become non-load-bearing — simplify (Harness Design)
 
 ### 6. Parallel Execution — Scale Smart
 
@@ -184,6 +187,7 @@ For detailed setup, usage, and decision guides, read the corresponding file in `
 6. **Tw93** — https://x.com/HiTw93/status/2032091246588518683 (references/tw93-cc-architecture.md)
 7. **Thariq: Skills** — https://x.com/trq212/status/2033949937936085378 (references/thariq-how-we-use-skills.md)
 8. **Thariq: Agent Design** — https://x.com/trq212/status/2027463795355095314 (references/thariq-seeing-like-an-agent.md)
+9. **Harness Design** — https://www.anthropic.com/engineering/harness-design-long-running-apps
 
 ## Common Mistakes
 
