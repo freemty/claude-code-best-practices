@@ -154,39 +154,41 @@ START
 
 ## Ecosystem Quick Reference
 
+Tools below are third-party -- install separately if needed. The core navigator works without any of them.
+
 For detailed setup, usage, and decision guides, read the corresponding file in `references/`.
 
 ### Web Access & Network (references/ecosystem-web-access.md)
 
-| Tool | Use When |
-|------|----------|
-| Jina Reader | Quick webpage -> markdown (`r.jina.ai/URL`) |
-| markdown-proxy | Login-required pages (X/Twitter, WeChat) |
-| Agent-Reach | Multi-platform access (Twitter, YouTube, Reddit, XHS...) |
-| web-fetcher | 5-tier fallback: Jina → defuddle → markdown.new → OpenCLI → raw HTML (jiahao-shao1) |
-| Playwright CLI | Browser automation & testing |
-| Web Access Skill | Comprehensive browsing with learning |
+| Tool | Invoke | Use When |
+|------|--------|----------|
+| `/web-fetcher` | available | 5-tier fallback: Jina → defuddle → markdown.new → OpenCLI → raw HTML |
+| `/agent-reach` | via gstack plugin | Multi-platform access (Twitter, YouTube, Reddit, XHS...) |
+| `/browse` | via gstack plugin | Browser automation with Playwright |
+| Jina Reader | built into web-fetcher | Quick webpage -> markdown (`r.jina.ai/URL`) |
+| markdown-proxy | install separately | Login-required pages (X/Twitter, WeChat) |
 
 ### Remote Execution (references/jiahao-shao1-skills.md)
 
-| Tool | Use When |
-|------|----------|
-| remote-cluster-agent | CC operates remote GPU clusters via MCP (~0.1s latency) (jiahao-shao1) |
+| Tool | Invoke | Use When |
+|------|--------|----------|
+| remote-cluster-agent | install separately | CC operates remote GPU clusters via MCP (~0.1s latency) |
 
 ### SWE Workflow (references/ecosystem-workflow.md)
 
-| Framework | Use When |
-|-----------|----------|
-| Superpowers | TDD-first, atomic task decomposition, structured process |
-| gstack | Full lifecycle: plan -> design -> ship -> QA -> retro |
-| LabMate | Research/experiment workflows |
+| Framework | Invoke | Use When |
+|-----------|--------|----------|
+| Superpowers | via superpowers plugin | TDD-first, atomic task decomposition, structured process |
+| gstack | via gstack plugin | Full lifecycle: plan -> design -> ship -> QA -> retro |
+| `/labmate` | available | Research/experiment workflows |
 
 ### Information Presentation (references/ecosystem-presentation.md)
 
-| Tool | Use When |
-|------|----------|
-| frontend-design | Web UI, landing pages, dashboards, polished components |
-| frontend-slides | Slide decks, presentations, PPT conversion |
+| Tool | Invoke | Use When |
+|------|--------|----------|
+| `/beamer-style` | available | Slide decks, Beamer presentations |
+| `/design-html` | via gstack plugin | Web UI, landing pages, dashboards |
+| frontend-slides | install separately | PPT-format slide decks |
 
 ## Sources
 

@@ -1,70 +1,24 @@
-# CC Navigator Skill
+# cc-navigator
 
-```
-  ___ ___   _  _          _           _
- / __/ __| | \| |__ ___ _(_)__ _ __ _| |_ ___ _ _
-| (_| (__  | .` / _` \ V / / _` / _` |  _/ _ \ '_|
- \___\___| |_|\_\__,_|\_/|_\__, \__,_|\__\___/_|
-                            |___/
-```
+Know which skill, agent, or tool to reach for -- workflow navigation for Claude Code.
 
-> **Claude Code Skill** | Installable via `npx skills add`
+A [Claude Code](https://claude.ai/claude-code) skill that classifies your task and recommends the right workflow, synthesized from 11 authoritative sources including Anthropic's official skills repo, the CC creator's tips, and Anthropic engineers' guides.
 
-Your Claude Code workflow navigator -- recommends the right skill, agent, or tool for any task based on 11 curated sources. Part of [yuanbo-skills](https://github.com/freemty/yuanbo-skills).
+## When to Use
 
-## Install
-
-```bash
-npx skills add freemty/cc-navigator
-```
-
-<details>
-<summary>Alternative install methods</summary>
-
-**Manual (curl)**
-
-```bash
-mkdir -p ~/.claude/skills/cc-navigator
-curl -sL https://raw.githubusercontent.com/freemty/cc-navigator/main/skills/cc-navigator/SKILL.md \
-  -o ~/.claude/skills/cc-navigator/SKILL.md
-```
-
-**Git clone (as plugin)**
-
-```bash
-git clone https://github.com/freemty/cc-navigator.git ~/.claude/plugins/cc-navigator
-```
-
-Then add to your `~/.claude/settings.json`:
-```json
-{
-  "plugins": ["~/.claude/plugins/cc-navigator"]
-}
-```
-
-</details>
-
-## What it does
-
-- **Navigates your workflow** -- classifies your task and recommends the right skill, in the right order
-- **Synthesizes best practices** from 11 authoritative CC-specific sources
-- **Points to ecosystem tools** for web access, SWE workflows, and information presentation
-
-## When it triggers
-
-- "How should I approach this?"
-- Starting a new task, feature, or debug session
-- Unsure which skill or agent to use next
+- "How should I approach this?" -- unsure where to start
+- Starting a new feature, bug fix, or refactor session
+- Feeling overwhelmed by a large task and need to break it down
+- Don't know which skill or agent to reach for
+- Between steps -- just finished something, what's next?
 - Need to find the right tool for web access, testing, or presentation
 
-## What's inside
+## What's Inside
 
-| Section | Content |
-|---------|---------|
-| Decision Framework | Task classification table + workflow decision tree |
-| Synthesized Principles | 8 cross-source principles for daily practice (11 sources) |
-| Ecosystem Quick Reference | Web access, SWE workflow, and presentation tools |
-| References | Full article archives + ecosystem detail guides |
+- **Decision Framework** -- task classification table + workflow decision tree that routes you to the right approach
+- **8 Synthesized Principles** -- cross-source best practices distilled from all 11 sources (planning, TDD, context hygiene, skills engineering, tool design, parallel execution, CLAUDE.md investment, hooks)
+- **Ecosystem Quick Reference** -- web access, SWE workflow, and presentation tools at a glance
+- **9 source documents** in `references/` -- full article archives and ecosystem detail guides for deep dives
 
 ## Sources
 
@@ -79,6 +33,22 @@ Then add to your `~/.claude/settings.json`:
 9. [Harness Design](https://www.anthropic.com/engineering/harness-design-long-running-apps) -- GAN-inspired multi-agent for long tasks
 10. [Anthropic Skills](https://github.com/anthropics/skills) -- Official skill spec, progressive disclosure, eval-driven skill development
 11. [jiahao-shao1](https://github.com/jiahao-shao1) -- Research workflow skills, remote-cluster-agent, 5-tier web-fetcher
+
+## Install
+
+### Via skills.sh (recommended)
+
+```bash
+npx skills add freemty/cc-navigator
+```
+
+Works with Claude Code, Cursor, Codex, Windsurf, and [15+ other agents](https://skills.sh).
+
+### Manual
+
+```bash
+git clone https://github.com/freemty/cc-navigator.git ~/.claude/skills/cc-navigator
+```
 
 ## License
 
